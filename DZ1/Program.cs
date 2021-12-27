@@ -1,9 +1,9 @@
-﻿int[] CreateArray(int n)
+﻿int[] CreateArray(int n, int m, int k)
 {
     int[] arr = new int[n];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().Next(1, 20);
+        arr[i] = new Random().Next(m, k);
     }
     return arr;
 }
@@ -52,7 +52,7 @@ void ShowEvenNumbersArray(int[] arr)
     }
 }
 
-int[] arr1 = CreateArray(10);
+int[] arr1 = CreateArray(10, 1, 21);
 ShowArray(arr1);
 Console.WriteLine();
 int count = EvenNumbersCounter(arr1);
